@@ -86,7 +86,7 @@ const SidebarContainer = styled("div")`
 const SidebarList = styled("ul")`
   height: 100%;
   width: 100%;
-  padding: 0;            
+  padding: 0;
 `;
 
 const SidebarListRow = styled("li")`
