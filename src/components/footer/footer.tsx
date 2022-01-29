@@ -8,7 +8,7 @@ export default function Footer(): JSX.Element {
         <p>© 2019 All Rights Reserved | Remazing</p>
       </FooterContentLeft>
       <FooterContentRight>
-          <p>Terms & Conditions | Privacy Policy </p>
+        <p>Terms & Conditions | Privacy Policy </p>
       </FooterContentRight>
     </FooterArea>
   );
@@ -32,7 +32,7 @@ const FooterContentLeft = styled("div")`
   font-weight: 100;
 `;
 const FooterContentRight = styled("div")`
-padding-right: 40px;
+  padding-right: 40px;
   color: #486277;
   font-size: 1.2em;
   font-weight: 100;
