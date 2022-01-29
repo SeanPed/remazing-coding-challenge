@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 0.65fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "header header header header"
+    "sidebar main main main"
+    "footer footer footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+.mainContentArea {
+  grid-area: main;
+}
+.sidebarArea {
+  grid-area: sidebar;
+}
+.footer {
+  grid-area: footer;
+}
