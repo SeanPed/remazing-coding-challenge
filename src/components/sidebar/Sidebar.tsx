@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import styled from "styled-components";
 
 import { MdHomeFilled } from "react-icons/md";
@@ -9,19 +9,23 @@ import { BsLightbulbFill } from "react-icons/bs";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { RiArrowDropUpLine } from "react-icons/ri";
 import { FaUserFriends } from "react-icons/fa";
+import SidebarSubNav from "./SidebarSubNav";
 
 const SidebarData = [
   {
+    id: 1,
     title: "Dashboard",
     icon: <MdHomeFilled />,
     link: "/",
   },
   {
+    id: 2,
     title: "Content Management",
     icon: <BiNews />,
     link: "/content-management",
   },
   {
+    id: 3,
     title: "Monitoring",
     icon: <AiFillPieChart />,
     iconClosed: <RiArrowDropDownLine />,
@@ -36,6 +40,7 @@ const SidebarData = [
     ],
   },
   {
+    id: 4,
     title: "Account",
     icon: <BsGearFill />,
     iconClosed: <RiArrowDropDownLine />,
@@ -55,18 +60,22 @@ export default function SideBar(): JSX.Element {
   return (
     <SidebarContainer>
       <SidebarList>
-        {SidebarData.map((val, key) => {
+        {SidebarData.map((val, index) => {
           return (
-            <SidebarListRow
-              id={window.location.pathname == val.link ? "active" : ""}
-              key={key}
-              onClick={() => {
-                window.location.pathname = val.link;
-              }}
-            >
-              <SidebarListRowIcon>{val.icon}</SidebarListRowIcon>
-              <SidebarListRowTitle>{val.title}</SidebarListRowTitle>
-            </SidebarListRow>
+            <>
+              <SidebarListRow
+                key={index}
+                id={window.location.pathname == val.link ? "active" : ""}
+                onClick={() => {
+                  window.location.pathname = val.link;
+                }}
+              >
+                <SidebarListRowIcon>{val.icon}</SidebarListRowIcon>
+                <SidebarListRowTitle>{val.title}</SidebarListRowTitle>
+              </SidebarListRow>
+              {val.subnav?.map((item) => {<SidebarSubNav title={item.title} link={item.link} icon={item.icon} />})}
+              
+            </>
           );
         })}
       </SidebarList>
@@ -86,7 +95,7 @@ const SidebarContainer = styled("div")`
 const SidebarList = styled("ul")`
   height: 100%;
   width: 100%;
-  padding: 0;            
+  padding: 0;
 `;
 
 const SidebarListRow = styled("li")`
@@ -99,9 +108,7 @@ const SidebarListRow = styled("li")`
   display: flex;
   justify-content: left;
   align-items: center;
-  &:hover {
-    background-color: #eff1fa;
-  }
+
   &#active {
     background-color: #fef8f3;
     color: #e9812c;

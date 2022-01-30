@@ -19,12 +19,17 @@ function App(): JSX.Element {
         <div className="mainContentArea">
           <Routes>
             <Route path="/" element={<div>Dashboard Area</div>} />
-            <Route
-              path="/content-management"
-              element={<ContentManagement/>}
-            />
+            <Route path="/content-management" element={<ContentManagement />} />
             <Route path="/monitoring" element={<div>Monitoring Area</div>} />
             <Route path="/account" element={<div>Account Area!</div>} />
+            <Route
+              path="/monitoring/content"
+              element={<div>Monitoring Content Area</div>}
+            />
+            <Route
+              path="/account/users"
+              element={<div>Account Users Area!</div>}
+            />
           </Routes>
         </div>
         <div className="footer">
