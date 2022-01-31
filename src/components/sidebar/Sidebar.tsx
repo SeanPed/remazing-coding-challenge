@@ -64,7 +64,7 @@ export default function SideBar(): JSX.Element {
           return (
             <>
               <SidebarListRow
-                key={index}
+                key={val.id}
                 id={window.location.pathname == val.link ? "active" : ""}
                 onClick={() => {
                   window.location.pathname = val.link;
@@ -73,8 +73,14 @@ export default function SideBar(): JSX.Element {
                 <SidebarListRowIcon>{val.icon}</SidebarListRowIcon>
                 <SidebarListRowTitle>{val.title}</SidebarListRowTitle>
               </SidebarListRow>
-              {val.subnav?.map((item) => {<SidebarSubNav title={item.title} link={item.link} icon={item.icon} />})}
-              
+              {val.subnav?.map((item) => {
+                <SidebarSubNav
+                  key={index}
+                  title={item.title}
+                  link={item.link}
+                  icon={item.icon}
+                />;
+              })}
             </>
           );
         })}

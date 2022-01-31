@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { IconType } from "react-icons/lib";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 type SubNavProps = {
@@ -9,29 +10,27 @@ type SubNavProps = {
 };
 
 export default function SidebarSubNav(item: SubNavProps): JSX.Element {
-  const [subnav, setSubnav] = useState(false);
+  const [subnav, setSubnav] = useState(true);
   const showSubnav = () => setSubnav(!subnav);
 
   return (
     <SideBarListSubNav>
-      {subnav ? (
-        <SideBarListSubNavItem
-          id={window.location.pathname == item.link ? "active" : ""}
-          key={item.title}
-          onClick={() => {
-            window.location.pathname = item.link;
-          }}
-        >
-          {item.icon}
-          {item.title}
-        </SideBarListSubNavItem>
-      ) : null}
+      <SideBarListSubNavItem
+        id={window.location.pathname == item.link ? "active" : ""} //instead of window use useLocation() from React Router
+        key={item.title}
+        onClick={() => {
+          window.location.pathname = item.link;
+        }}
+      >
+        {item.icon}
+        {item.title}
+      </SideBarListSubNavItem>
       )
     </SideBarListSubNav>
   );
 }
 
-const SideBarListSubNav = styled("ul")`
+const SideBarListSubNav = styled("li")`
   list-style: none;
 `;
 const SideBarListSubNavItem = styled("li")`
