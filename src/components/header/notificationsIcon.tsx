@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 export default function NotificationsIcon(): JSX.Element {
   return (
-    <Bellicon onClick={() => alert("No new Notifications!")}>
+    <Bellicon onClick={() => alert("Unfortunately there are no new Notifications!")}>
       <FaBell />
       <NewNotificationsIcon>
         <AiFillAmazonCircle size={20} />

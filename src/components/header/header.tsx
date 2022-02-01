@@ -6,7 +6,7 @@ export default function Header(): JSX.Element {
   return (
     <HeaderArea>
       <HeaderContentLeft>
-        <HeaderLogo src="src\public\images\remazing-logo-color.jpg" />
+        <HeaderLogo src="src\public\images\Remazing Logo.png" />
       </HeaderContentLeft>
       <HeaderContentRight>
         <NotificationsIcon />
@@ -46,5 +46,5 @@ const HeaderContentRight = styled("div")`
 `;
 
 const HeaderLogo = styled("img")`
-  width: 100%;
+  width: 90%;
 `;
