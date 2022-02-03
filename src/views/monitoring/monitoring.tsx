@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { FcDeleteDatabase } from 'react-icons/fc';
 
-export default function MonitoringContentView(): JSX.Element {
+export default function MonitoringView(): JSX.Element {
   return (
     <MonitoringManagementArea>
       <MonitoringManagementLabel>
-      <FcDeleteDatabase size={40}/> &nbsp; Unfortunately there is currently no Data to Display
+      <FcDeleteDatabase size={40}/> &nbsp; Unfortunately there is currently no Monitoring Data to Display
       </MonitoringManagementLabel>
     </MonitoringManagementArea>
   );

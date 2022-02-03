@@ -5,7 +5,7 @@ export default function DashboardContentView(): JSX.Element {
   return (
     <DashboardManagementArea>
       <DashboardManagementLabel>
-      <FcDeleteDatabase size={40}/> &nbsp; Unfortunately there is currently no Data to Display
+      <FcDeleteDatabase size={40}/> &nbsp; Unfortunately there is currently no Dashboard Data to Display
       </DashboardManagementLabel>
     </DashboardManagementArea>
   );

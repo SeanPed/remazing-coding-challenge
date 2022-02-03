@@ -16,9 +16,12 @@ export default function Footer(): JSX.Element {
 
 const FooterArea = styled("div")`
   display: flex;
-    align-items: center;
+  position: fixed;
+  align-items: center;
   justify-content: space-between;
-  height: 5vh;
+  min-height: 5vh;
+  width: 100%;
+  padding-bottom: 10px;
   border: 1px solid #dfe2e5;
   background-color: #eff1fa;
 `;

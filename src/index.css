@@ -3,7 +3,7 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: SourceSansProRegular, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,4 +11,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@font-face {
+  font-family: "SourceSansProRegular";
+  src: url("src/public/fonts/SourceSansPro-Regular.ttf");
 }

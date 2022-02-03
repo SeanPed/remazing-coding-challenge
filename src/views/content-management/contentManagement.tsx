@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import { FcDeleteDatabase } from 'react-icons/fc';
+import { FcDeleteDatabase } from "react-icons/fc";
 
-export default function ContentManagementContentView(): JSX.Element {
+export default function ContentManagementView(): JSX.Element {
   return (
     <ContentManagementArea>
       <ContentManagementLabel>
-      <FcDeleteDatabase size={40}/> &nbsp; Unfortunately there is currently no Data to Display
+        <FcDeleteDatabase size={40} /> &nbsp; Unfortunately there is currently
+        no Content-Management Data to Display
       </ContentManagementLabel>
     </ContentManagementArea>
   );
@@ -19,12 +20,12 @@ const ContentManagementArea = styled("div")`
 `;
 
 const ContentManagementLabel = styled("div")`
-height: 100%;
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-font-weight: 700;
-color: #7f8fa4;
-font-size: 1.2em;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: #7f8fa4;
+  font-size: 1.2em;
 `;

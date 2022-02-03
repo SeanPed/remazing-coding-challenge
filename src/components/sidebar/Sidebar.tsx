@@ -65,6 +65,7 @@ export default function Sidebar(): JSX.Element {
 
 const SidebarNav = styled("nav")`
   min-height: 85vh;
+  min-width: 5vw;
   border: 1px solid #dfe2e5;
   border-top: none;
 `;

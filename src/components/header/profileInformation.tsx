@@ -27,7 +27,7 @@ const ProfileArea = styled("div")`
 
 const ProfileName = styled("p")`
   color: #354052;
-  font-weight: 400;
+  font-weight: bold;
   font: solid;
 `;
 const ProfilePicture = styled("img")`

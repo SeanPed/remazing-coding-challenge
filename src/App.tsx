@@ -1,12 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Sidebar from "./components/sidebar/Sidebar";
-import AccountContentView from "./views/account/account";
-import ContentManagement from "./views/content-management/contentManagement";
+import AccountView from "./views/account/account";
+import ContentManagementView from "./views/content-management/contentManagement";
 import Dashboard from "./views/dashboard/dashboard";
-import MonitoringContentView from "./views/monitoring/monitoring";
+import MonitoringView from "./views/monitoring/monitoring";
 
 function App(): JSX.Element {
   return (
@@ -21,16 +22,16 @@ function App(): JSX.Element {
         <div className="mainContentArea">
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/content-management" element={<ContentManagement />} />
-            <Route path="/monitoring" element={<MonitoringContentView />} />
-            <Route path="/account" element={<AccountContentView />} />
+            <Route path="/content-management" element={<ContentManagementView />} />
+            <Route path="/monitoring" element={<MonitoringView />} />
+            <Route path="/account" element={<AccountView />} />
             <Route
               path="/monitoring/content"
-              element={<div>Monitoring Content Area</div>}
+              element={<MonitoringView />}
             />
             <Route
               path="/account/users"
-              element={<div>Account Users Area!</div>}
+              element={<ContentManagementView />}
             />
           </Routes>
         </div>

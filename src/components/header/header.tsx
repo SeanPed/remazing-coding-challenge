@@ -21,7 +21,7 @@ const HeaderArea = styled("div")`
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  height: 10vh;
+  height: 8vh;
   border: 1px solid #dfe2e5;
   background-color: #ffffff;
   padding-top: 5px;
@@ -46,5 +46,5 @@ const HeaderContentRight = styled("div")`
 `;
 
 const HeaderLogo = styled("img")`
-  width: 90%;
+  width: 80%;
 `;

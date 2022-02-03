@@ -48,11 +48,11 @@ const SidebarLink = styled(Link)`
   color: #7f8fa4;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 1rem 1rem 1rem 2rem;
+  padding: 2rem 1rem 1rem 2rem;
   list-style: none;
   height: 10%;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
   &:hover {
     background-color: #eff1fa;
@@ -64,7 +64,7 @@ const SidebarLink = styled(Link)`
 `;
 
 const SidebarLabel = styled("span")`
-  margin-left: 16px;
+  margin-left: 20px;
 `;
 
 const DropdownLink = styled(Link)`

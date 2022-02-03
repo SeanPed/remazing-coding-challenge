@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   display: grid;
-  grid-template-columns: 0.65fr 1fr 1fr 1fr;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
   grid-template-areas:
     "header header header header"
@@ -15,7 +15,7 @@
 .mainContentArea {
   grid-area: main;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 .sidebarArea {
   grid-area: sidebar;
