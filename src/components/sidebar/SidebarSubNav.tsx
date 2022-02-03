@@ -48,7 +48,7 @@ const SidebarLink = styled(Link)`
   color: #7f8fa4;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 2rem 1rem 1rem 2rem;
+  padding: 1rem 1rem 1rem 2rem;
   list-style: none;
   height: 10%;
   text-decoration: none;
