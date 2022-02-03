@@ -1,12 +1,13 @@
 import { useState } from "react";
+import styled from "styled-components";
+import Searchbar from "../search/Searchbar";
+import Card from "../card/Card";
+
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoGrid } from "react-icons/io5";
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
-import styled from "styled-components";
-import Searchbar from "../search/searchbar";
-import Card from "./card";
 
-const BrandsData = [
+const brandsData = [
   {
     Name: "Studio Ghibli",
     Logo: "src/public/images/Brand_Logos/Ghibli_brand_logo.jpg",
@@ -41,52 +42,52 @@ const BrandsData = [
   },
 ];
 
-export default function Cardlist(): JSX.Element {
+export default function BrandsContent(): JSX.Element {
   const [searchBrands, setSearchBrands] = useState("");
-  const [showCardList, setShowCardList] = useState(false);
+  const [showCardList, setShowCardList] = useState(true);
 
   return (
-    <CardListContainer>
-      <CardListHeader>
-        <CardListHeaderToggle onClick={() => alert("Hello World")}>
-          Your Brands <RiArrowDropUpLine />
-        </CardListHeaderToggle>
-        <Searchbar
-          setValue={(event?: any) => {
-            setSearchBrands(event.target.value);
-          }}
-        />
+    <BrandsContentContainer>
+      <BrandsContentHeader>
+        <CardListViewToggle onClick={() => setShowCardList(!showCardList)}>
+          Your Brands
+          {showCardList ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />}
+        </CardListViewToggle>
+        <Searchbar setValue={setSearchBrands} />
         <CardListHeaderSortIcons>
-          <IoGrid size={30} />
-          <GiHamburgerMenu size={30} />
+          <IoGrid size={30} color="#c0c0c3" />
+          <GiHamburgerMenu size={30} color="#e3e3e7" />
         </CardListHeaderSortIcons>
-      </CardListHeader>
-      <CardList>
-        {BrandsData.filter((brand) => {
-          if (searchBrands == "") {
-            return brand;
-          } else if (
-            brand.Name.toLowerCase().includes(searchBrands.toLowerCase())
-          ) {
-            return brand;
-          }
-        }).map((brand) => (
-          <Card logo={brand.Logo} key={brand.Name} />
-        ))}
-      </CardList>
-    </CardListContainer>
+      </BrandsContentHeader>
+      {showCardList ? (
+        <CardList>
+          {brandsData
+            .filter((brand) => {
+              if (searchBrands == "") {
+                return brand;
+              } else if (
+                brand.Name.toLowerCase().includes(searchBrands.toLowerCase())
+              ) {
+                return brand;
+              }
+            })
+            .map((brand) => (
+              <Card logo={brand.Logo} key={brand.Name} />
+            ))}
+        </CardList>
+      ) : null}
+    </BrandsContentContainer>
   );
 }
 
-const CardListContainer = styled("div")`
+const BrandsContentContainer = styled("div")`
   display: flex;
   flex-direction: column;
   position: relative;
   width: 100%;
   height: 100%;
 `;
-
-const CardListHeader = styled("div")`
+const BrandsContentHeader = styled("div")`
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -94,25 +95,20 @@ const CardListHeader = styled("div")`
   position: absolute;
   top: 20px;
 `;
-
-const CardListHeaderToggle = styled("div")`
+const CardListViewToggle = styled("div")`
   display: flex;
-  gap: 10px;
+  gap: 30px;
   padding-left: 100px;
   padding-top: 10px;
   color: #385483;
   font-size: 1.5rem;
-  gap: 30px;
 `;
-
 const CardListHeaderSortIcons = styled("div")`
   display: flex;
   gap: 10px;
   padding-right: 100px;
   padding-top: 10px;
-  color: #c0c0c3;
-  `;
-
+`;
 const CardList = styled("div")`
   display: flex;
   flex-wrap: wrap;

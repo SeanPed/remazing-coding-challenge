@@ -17,7 +17,6 @@ const MonitoringManagementArea = styled("div")`
   height: 100%;
   border-right: 1px solid #dfe2e5;
 `;
-
 const MonitoringManagementLabel = styled("div")`
 height: 100%;
 width: 100%;

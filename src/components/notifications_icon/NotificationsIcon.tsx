@@ -1,20 +1,22 @@
-import React from "react";
+import styled from "styled-components";
+
 import { AiFillAmazonCircle } from "react-icons/ai";
 import { FaBell } from "react-icons/fa";
-import styled from "styled-components";
 
 export default function NotificationsIcon(): JSX.Element {
   return (
-    <Bellicon onClick={() => alert("Unfortunately there are no new Notifications!")}>
+    <BellIcon
+      onClick={() => alert("Unfortunately there are no new Notifications!")}
+    >
       <FaBell />
       <NewNotificationsIcon>
         <AiFillAmazonCircle size={20} />
       </NewNotificationsIcon>
-    </Bellicon>
+    </BellIcon>
   );
 }
 
-const Bellicon = styled("a")`
+const BellIcon = styled("a")`
   position: relative;
   font-size: 1.5em;
   color: #444444;

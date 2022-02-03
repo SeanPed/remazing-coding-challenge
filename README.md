@@ -14,3 +14,16 @@ SideBar - const -> wieso nicht in einer extra componente? Lösung finden.
 anlesen - temperate liberal? `$ usw.
 
 where does margin-top: -16px; in sidebar Area comes from ffs?
+
+
+
+wieso buttons keine eigene komponente, aus meiner sicht keinen wirklichen vorteil, da nur an einer stelle gemacht, wenn diese jedoch an mehreren stellen benutzt würden macht eine destrukturierte componentenstruktur mehr sinn?
+
+
+
+Bennenung Ordner:
+der ordner heuisst views, da hierbei nur bereiche "geändert" werden uind keine pages.
+
+sortirung CSS - teaminterne convention?
+
+wieso heissen Dateein im view ordner ...Views?

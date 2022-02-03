@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 export default function Footer(): JSX.Element {
@@ -25,7 +24,6 @@ const FooterArea = styled("div")`
   border: 1px solid #dfe2e5;
   background-color: #eff1fa;
 `;
-
 const FooterContentLeft = styled("div")`
   padding-left: 40px;
   color: #486277;

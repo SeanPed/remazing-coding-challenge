@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import Cardmenu from "./cardmenu";
+import CardMenu from "../card_menu/CardMenu";
 
 type CardProps = {
   logo: string;
@@ -15,7 +15,7 @@ export default function Card({ logo }: CardProps): JSX.Element {
       onMouseLeave={() => setShowCardmenu(false)}
     >
       {showCardmenu ? (
-        <Cardmenu />
+        <CardMenu />
       ) : (
         <BrandLogoContainer>
           <BrandLogo src={logo} />
@@ -32,11 +32,11 @@ const CardContainer = styled("div")`
   align-items: center;
   justify-content: center;
   border: 2px #e6eaee;
-  background-color: #ffffff;
   border-radius-top: 10px;
   padding: 20px 20px;
   border-top-left-radius: 2%;
   border-top-right-radius: 2%;
+  background-color: #ffffff;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
     rgba(17, 17, 26, 0.05) 0px 8px 32px;
 `;

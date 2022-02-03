@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import Cardlist from "../../components/card/cardList";
+import BrandsContent from "../../components/brands_content/BrandsContent";
 
 export default function AccountView(): JSX.Element {
   return (
     <AccountArea>
       <AccountAreaHeader>Brands</AccountAreaHeader>
       <AccountAreaContent>
-        <Cardlist />
+        <BrandsContent />
       </AccountAreaContent>
     </AccountArea>
   );
@@ -17,7 +17,6 @@ const AccountArea = styled("div")`
   height: 100%;
   border-right: 1px solid #dfe2e5;
 `;
-
 const AccountAreaHeader = styled("div")`
   display: flex;
   justify-content: flex-start;
@@ -32,7 +31,6 @@ const AccountAreaHeader = styled("div")`
   color: #385483;
   font-weight: bold;
 `;
-
 const AccountAreaContent = styled("div")`
   height: 100%;
   width: 100%;

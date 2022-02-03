@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-export default function ProfileInformation() {
+export default function ProfileInformation(): JSX.Element {
   return (
     <ProfileArea>
       <ProfileName>JB</ProfileName>
@@ -24,7 +23,6 @@ const ProfileArea = styled("div")`
   justify-content: space-between;
   padding-left: 20px;
 `;
-
 const ProfileName = styled("p")`
   color: #354052;
   font-weight: bold;

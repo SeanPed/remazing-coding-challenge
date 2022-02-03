@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FcDeleteDatabase } from 'react-icons/fc';
 
-export default function DashboardContentView(): JSX.Element {
+export default function DashboardView(): JSX.Element {
   return (
     <DashboardManagementArea>
       <DashboardManagementLabel>

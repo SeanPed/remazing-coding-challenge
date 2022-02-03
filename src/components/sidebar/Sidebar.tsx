@@ -1,3 +1,6 @@
+import SidebarSubNav from "../sidebar_subnav/SidebarSubNav";
+import styled from "styled-components";
+
 import { BsLightbulbFill, BsGearFill } from "react-icons/bs";
 import { MdHomeFilled } from "react-icons/md";
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
@@ -5,10 +8,7 @@ import { AiFillPieChart } from "react-icons/ai";
 import { BiNews } from "react-icons/bi";
 import { FaUserFriends } from "react-icons/fa";
 
-import SidebarSubNav from "./SidebarSubNav";
-import styled from "styled-components";
-
-const SidebarData = [
+const sidebarData = [
   {
     title: "Dashboard",
     icon: <MdHomeFilled />,
@@ -54,7 +54,7 @@ export default function Sidebar(): JSX.Element {
     <>
       <SidebarNav>
         <SidebarWrap>
-          {SidebarData.map((item, index) => {
+          {sidebarData.map((item, index) => {
             return <SidebarSubNav item={item} key={index} />;
           })}
         </SidebarWrap>
@@ -67,7 +67,7 @@ const SidebarNav = styled("nav")`
   min-height: 85vh;
   min-width: 5vw;
   border: 1px solid #dfe2e5;
-  border-top: none;
+  margin-top: -1px;
 `;
 
 const SidebarWrap = styled("div")`

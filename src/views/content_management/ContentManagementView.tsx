@@ -18,7 +18,6 @@ const ContentManagementArea = styled("div")`
   height: 100%;
   border-right: 1px solid #dfe2e5;
 `;
-
 const ContentManagementLabel = styled("div")`
   height: 100%;
   width: 100%;
