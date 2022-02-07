@@ -24,7 +24,7 @@ const SearchbarContainer = styled("div")`
   border: 2px solid grey;
   border-radius: 5px;
   padding-right: 10px;
-  margin-left: -55px;
+  margin-left: -110px;
   color: #a0a6ae;
   width: 42%;
   height: 40px;

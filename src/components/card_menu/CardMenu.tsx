@@ -22,10 +22,11 @@ const CardMenuContainer = styled("div")`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("src/public/images/background_card_menu.jpg");
-  background-size: 150px;
+  background-color: #f0f0f0;
+  border-radius: 2%;
   min-width: 100%;
   min-height: 100%;
+  padding: 10px;
 `;
 const CardMenuList = styled("ul")`
   list-style: none;
